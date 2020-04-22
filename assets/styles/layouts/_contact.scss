@@ -1,0 +1,19 @@
+.contact-wrap {
+  background-color: white;
+
+  input {
+    height: 50px;
+  }
+
+  .required {
+    color: orange;
+  }
+
+  form {
+    label {
+      color: gray;
+      font-weight: bold;
+      margin: 10px 0;
+    }
+  }
+}

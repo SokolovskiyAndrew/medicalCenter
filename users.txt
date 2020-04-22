@@ -1,0 +1,5 @@
+Database name: medicalCenter
+User: doctor
+Password: doctor12345
+Site's name: hearing-center
+email: doctorPavloPasha@thenetninja.co.uk

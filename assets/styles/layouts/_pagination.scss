@@ -1,0 +1,26 @@
+.wp-pagenavi {
+  margin: auto;
+  margin-bottom: 40px;
+
+  .current {
+    background-color: $blue;
+    color: white;
+    border: none;
+  }
+
+  a,
+  span {
+    color: gray;
+    text-align: center;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 50%;
+    border: 1px solid #e6e6e6;
+    margin: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: box-shadow 0.4s;
+  }
+}

@@ -1,0 +1,25 @@
+@mixin two_borders ($bottom) {
+  &::before {
+    content: '';
+    position: absolute;
+    top: $bottom;
+    left: 0;
+    width: 70px;
+    height: 70px;
+    border-top-left-radius: 25px;
+    border-top: 8px solid $middle;
+    border-left: 8px solid $middle;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: $bottom;
+    right: 0;
+    width: 70px;
+    height: 70px;
+    border-bottom-right-radius: 25px;
+    border-bottom: 8px solid $middle;
+    border-right: 8px solid $middle;
+  }
+}

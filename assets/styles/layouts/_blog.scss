@@ -1,0 +1,199 @@
+.ribbon {
+  position: absolute;
+  background-color: $blue;
+  bottom: 20px;
+  left: 0;
+  padding: 0 20px;
+  line-height: 40px;
+  text-align: center;
+  border-bottom-right-radius: 15px;
+  border-top-right-radius: 15px;
+
+  a {
+    vertical-align: middle;
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    bottom: -32%;
+    left: 8px;
+    width: 40px;
+    height: 40px;
+    background-color: darken($blue, 15%);
+    transform: rotate(30deg);
+  }
+}
+
+.the-news {
+  padding: 100px 0 40px;
+
+  .post-thumbnail {
+    @include two_borders (-4%);
+
+    img {
+      position: relative;
+      display: inline-block;
+      border-radius: 15px;
+      box-shadow: 6px 6px 20px rgb(100, 99, 99);
+    }
+  }
+
+  .the-news-wrap {
+    margin-bottom: 60px;
+
+    h3 {
+      margin-top: 24px;
+      font-size: 22px;
+      font-weight: 600;
+      color: #404040;
+    }
+
+    .entry-content {
+      margin-top: 32px;
+
+      p {
+        font-size: 14px;
+        line-height: 2;
+        color: #828282;
+      }
+    }
+
+    .entry-footer {
+      font-weight: bold;
+      font-size: 18px;
+    }
+  }
+
+  .post-metas {
+    font-size: 12px;
+    font-weight: 600;
+    color: #828282;
+
+    div {
+      margin-right: 16px;
+    }
+
+    .label {
+      margin: 0;
+      color: #18a3eb;
+    }
+
+    a {
+      color: #828282;
+    }
+  }
+}
+
+.sidebar {
+  margin-left: 80px;
+  padding: 100px 0;
+
+  .tagcloud {
+    a {
+      display: inline-block;
+      border: 2px solid $blue;
+      padding: 0 10px;
+      margin: 10px 0;
+      border-radius: 15px;
+      font-size: 16px !important;
+      background-color: transparent;
+    }
+  }
+
+  .searchform {
+    width: 100%;
+    position: relative;
+    background-color: transparent;
+
+    .screen-reader-text {
+      display: none;
+    }
+
+    div {
+      &::after {
+        font-family: $fa-font-path;
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 40px;
+        height: 40px;
+        border: 1px solid $blue;
+        background: $blue;
+        font-size: 20px;
+        text-align: center;
+        color: #fff;
+        border-radius: 0 5px 5px 0;
+        cursor: pointer;
+        content: '\f002';
+      }
+    }
+
+    input[type=text] {
+      width: 100%;
+      border: 3px solid $blue;
+      border-right: none;
+      padding: 5px;
+      height: 40px;
+      border-radius: 5px;
+      outline: none;
+      color: #9dbfaf;
+
+      &:focus {
+        color: $blue;
+      }
+    }
+
+    input[type=submit] {
+      display: none;
+    }
+  }
+
+  .wrap {
+    width: 30%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .widgetschedule {
+    margin-bottom: 55px;
+
+    .widgettitle {
+      font-size: 24px;
+      font-weight: 600;
+      color: #404040;
+    }
+  }
+
+  .widgetschedule:last-child {
+    position: relative;
+    padding: 32px;
+    border-radius: 20px;
+    border: 2px solid $blue;
+
+    .widgettitle {
+      position: absolute;
+      top: -14px;
+      left: -2px;
+      height: 48px;
+      padding-right: 16px;
+      background: #fff;
+      font-size: 24px;
+      font-weight: 600;
+      color: #404040;
+    }
+
+    p {
+      font-size: 20px;
+      color: gray;
+    }
+  }
+}
+
+//searchform screen-reader-text searchsubmit input[type=text] input[type=submit]

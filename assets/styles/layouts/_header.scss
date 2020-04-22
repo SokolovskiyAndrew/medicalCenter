@@ -1,0 +1,244 @@
+.header-row-flex {
+  display: flex;
+  justify-content: flex-end;
+  transition: display 0.4s;
+
+  .header-info_block {
+    display: flex;
+  }
+}
+
+header i {
+  font-family: $fa-font-path;
+  align-self: center;
+  font-size: 22px;
+  color: rgb(248, 183, 63);
+  margin-right: 10px;
+}
+
+.header-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 10px 0;
+  max-width: 760px;
+  width: 100%;
+  margin-bottom: 50px;
+}
+
+.navbar-top {
+  position: fixed;
+  z-index: 100;
+  top: 70px;
+  left: 0;
+  padding: 0 100px;
+  background-color: #313a41;
+  width: 100%;
+  box-sizing: border-box;
+  transition: 0.5s;
+
+  .navbar-logo img {
+    position: absolute;
+    bottom: -87%;
+    height: 150px;
+    line-height: 50px;
+    transition: 0.8s;
+  }
+
+  .menu-row {
+    display: flex;
+    justify-content: space-between;
+
+    .main-menu {
+      float: right;
+    }
+  }
+
+  .navbar-menu {
+    margin: 0;
+    padding: 0;
+    display: flex;
+
+    .menu-item {
+      position: relative;
+
+      a {
+        display: block;
+        height: 50px;
+        line-height: 50px;
+        padding: 0 20px;
+        color: #fff;
+        font-weight: bold;
+        text-transform: uppercase;
+        text-decoration: none;
+        transition: background-color 0.4s;
+
+        &:hover,
+        &:active {
+          color: #fff;
+          background-color: $middle;
+        }
+      }
+
+      .sub-menu {
+        position: absolute;
+        left: 0;
+        background: #333;
+        display: none;
+
+        li {
+          display: block;
+          width: 250px;
+        }
+      }
+    }
+
+    .active {
+      color: #fff;
+      background-color: $middle;
+    }
+
+    .menu-item-has-children-active {
+      .sub-menu {
+        display: block;
+      }
+    }
+
+    .menu-item-has-children::after {
+      width: 0;
+      height: 0;
+      border: 4px solid transparent;
+      border-bottom: none;
+      border-top-color: white;
+      content: '';
+      vertical-align: middle;
+      display: inline-block;
+      position: absolute;
+      top: 23px;
+      right: 5%;
+    }
+
+    // .menu-item-has-children-active::before {
+    //   content: '\f078';
+    // }
+  }
+}
+
+.black {
+  background: rgba(0, 0, 0, 0.418);
+  padding: 0;
+  top: 0;
+
+  .navbar-logo img {
+    top: 0;
+    height: 50px;
+  }
+
+  .header-search {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    i.fa-search {
+      color: blue !important;
+    }
+  }
+}
+
+//Mobile menu
+.hamburger {
+  float: right;
+  position: absolute;
+  top: 20px;
+  right: 10%;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #1ad4bd;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 200;
+  cursor: pointer;
+
+  .line {
+    position: absolute;
+    width: 60%;
+    height: 3px;
+    border-radius: 1.5px;
+    background-color: #fff;
+    transition: all cubic-bezier(0.26, 0.1, 0.27, 1.55) 0.75s;
+  }
+
+  .top {
+    top: 28%;
+  }
+
+  .middle {
+    top: 48%;
+  }
+
+  .bottom {
+    top: 68%;
+  }
+}
+
+.hamburger-close .top {
+  transform: rotate(45deg);
+  top: 48%;
+}
+
+.hamburger-close .middle,
+.hamburger-close .bottom {
+  transform: rotate(-45deg);
+  top: 48%;
+}
+
+.hamburger-close .toggler-line {
+  transform: translateX(-200%);
+}
+
+@media (max-width: 729px) {
+  .navbar-top {
+    padding: 0 20px;
+
+    .main-menu {
+      // display: none;
+      position: absolute;
+      width: 100%;
+      height: calc(100vh - 50px);
+      background-color: #333;
+      top: 50px;
+      left: -100%;
+      transition: 0.5s;
+
+      .navbar-menu {
+        display: block;
+        text-align: center;
+
+        a {
+          border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+        }
+
+        .sub-menu {
+          position: relative;
+          background-color: #003e6f;
+
+          li {
+            width: 100%;
+          }
+        }
+      }
+    }
+
+    .active {
+      left: 0;
+    }
+
+    .hamburger {
+      display: flex;
+    }
+  }
+}

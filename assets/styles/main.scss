@@ -1,0 +1,72 @@
+@import "common/variables";
+
+/** Import everything from autoload */
+@import "./autoload/**/*";
+@import "components/buttons";
+@import "components/mixins";
+@import "common/global";
+@import "layouts/header";
+@import "layouts/hero-main";
+@import "layouts/hero-common";
+@import "layouts/about-section";
+@import "layouts/archive-services";
+@import "layouts/pagination";
+@import "layouts/blog";
+@import "layouts/contact";
+@import "layouts/footer";
+@import "~bootstrap/scss/bootstrap";
+
+$font-primary: 'Lato',Arial, sans-serif;
+
+/**
+ * Import npm dependencies
+ *
+ * Prefix your imports with `~` to grab from node_modules/
+ * @see https://github.com/webpack-contrib/sass-loader#imports
+ */
+// @import "~some-node-module";
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+  text-decoration: none;
+  font-family: $font-primary;
+  color: #051f4e;
+}
+
+.smth {
+  background-color: blue;
+  height: 100px;
+  width: 100px;
+
+  &::before {
+    content: '\f09a';
+    font-family: $fa-font-path;
+    font-size: 50px;
+  }
+}
+
+.button {
+  width: 260px;
+  height: 50px;
+  border-radius: 15px;
+  background-color: #4ee0ae;
+  color: red;
+  font-size: 22px;
+  border: none;
+
+  &:hover {
+    box-shadow: 10px 10px  orange;
+  }
+}
+
+.lorem {
+  background-color: palegreen;
+  color: rgba(128, 128, 128, 0.178);
+}
+
+.button-header {
+  margin-top: 200px;
+}

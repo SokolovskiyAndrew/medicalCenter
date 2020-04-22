@@ -1,0 +1,26 @@
+.hero-wrap {
+  font-size: 20px;
+  position: relative;
+  height: 100vh;
+  background-position: top;
+  background-size: cover;
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    content: '';
+    opacity: 0.4;
+    background: rgb(255, 255, 255);
+    background: linear-gradient(103deg, rgba(255, 255, 255, 0.3307823373490021) 36%, rgba(26, 212, 189, 1) 61%);
+  }
+}
+
+.hero-clip {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 500px;
+}

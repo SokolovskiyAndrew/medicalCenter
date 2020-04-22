@@ -1,0 +1,119 @@
+.services {
+  background: white;
+}
+
+.services_cat {
+  .widgettitle {
+    display: none;
+  }
+
+  .tagcloud {
+    margin-top: 100px;
+    display: flex;
+    justify-content: space-between;
+
+    .tag-cloud-link {
+      height: 50px;
+      line-height: 50px;
+      padding: 0 20px;
+      border-radius: 15px;
+      color: #fff;
+      background-color: $middle;
+      font-size: 13px !important;
+      font-weight: bold;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: background-color 0.4s;
+
+      &:hover,
+      &:active {
+        color: #fff;
+        background-color: $middle;
+      }
+    }
+  }
+}
+
+.widgetschedule {
+  margin-top: 50px;
+
+  .widgettitle {
+    font-size: 24px;
+    font-weight: 600;
+    color: #404040;
+  }
+}
+
+.widgetschedule:last-child {
+  position: relative;
+  padding: 32px;
+  border-radius: 20px;
+  border: 2px solid $blue;
+
+  .widgettitle {
+    position: absolute;
+    top: -14px;
+    left: -2px;
+    height: 48px;
+    padding-right: 16px;
+    background: #fff;
+    font-size: 24px;
+    font-weight: 600;
+    color: #404040;
+  }
+
+  p {
+    font-size: 20px;
+    color: gray;
+  }
+}
+
+.tabulation {
+  .nav-pills {
+    .nav-item {
+      margin-bottom: 10px;
+      position: relative;
+
+      .nav-link {
+        background: white;
+        border-radius: 4px;
+        color: black;
+        font-weight: 400;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        font-size: 18px;
+        line-height: 30px;
+
+        span {
+          color: $middle;
+          font-size: 30px;
+        }
+
+        &.active {
+          color: white;
+          background: $middle;
+          border: 1px solid $middle;
+
+          span {
+            color: white;
+          }
+        }
+      }
+    }
+  }
+}
+
+a[href='#usi-poslugi'] {
+  display: block;
+  position: relative;
+
+  &::before {
+    content: '\039';
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 40px;
+    height: 40px;
+    background-color: red;
+  }
+}
