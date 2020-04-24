@@ -10,6 +10,8 @@
 @import "layouts/hero-common";
 @import "layouts/about-section";
 @import "layouts/archive-services";
+@import "layouts/service-single";
+@import "layouts/doctor";
 @import "layouts/pagination";
 @import "layouts/blog";
 @import "layouts/contact";
@@ -33,7 +35,6 @@ $font-primary: 'Lato',Arial, sans-serif;
   list-style-type: none;
   text-decoration: none;
   font-family: $font-primary;
-  color: #051f4e;
 }
 
 .smth {

@@ -13,7 +13,7 @@
  * @link      http://pear.php.net/package/PackageName
  */?>
 
-<footer class="container-fluid footer" style="background-image: url(<?php echo get_template_directory_uri(); ?>../assets/images/figures_bg.jpg)">
+<footer class="container-fluid footer">
   <div class="container">
     <div class="row footer-block">
       <div class="footer-about col-lg-3">

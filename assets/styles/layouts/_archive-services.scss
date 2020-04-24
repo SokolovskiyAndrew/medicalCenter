@@ -1,5 +1,33 @@
+.servic-header {
+  background-size: cover;
+  background-position-y: right;
+  position: relative;
+  z-index: -900;
+
+  h3 {
+    margin: 100px 0;
+    color: white;
+    font-family: $monser;
+    font-size: 60px;
+    text-align: center;
+  }
+}
+
+.service-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0.4;
+  background-color: $blue;
+  z-index: -1000;
+}
+
 .services {
+  margin-top: 60px;
   background: white;
+  position: relative;
 }
 
 .services_cat {
@@ -74,10 +102,12 @@
       margin-bottom: 10px;
       position: relative;
 
+      @include glass-effect;
+
       .nav-link {
         background: white;
         border-radius: 4px;
-        color: black;
+        color: rgb(85, 85, 85);
         font-weight: 400;
         border: 1px solid rgba(0, 0, 0, 0.1);
         font-size: 18px;
@@ -93,27 +123,176 @@
           background: $middle;
           border: 1px solid $middle;
 
+          i {
+            color: white;
+          }
+
           span {
             color: white;
           }
         }
       }
+
+      .service-icon {
+        color: $middle;
+        font-size: 30px;
+        margin-right: 20px;
+      }
     }
   }
 }
 
-a[href='#usi-poslugi'] {
-  display: block;
+.service-box {
   position: relative;
+  width: 270px;
+  margin: 0 10px 30px;
+  background: white;
+  border-radius: 10px;
+  transition: box-shadow 0.4s ease-in;
+  box-shadow: -6px -6px 20px rgba(255, 255, 255, 1), 6px 6px 20px rgba(0, 0, 0, 0.1);
+  font-family: $roboto;
 
-  &::before {
-    content: '\039';
+  &-overlay {
     position: absolute;
-    display: block;
     top: 0;
     left: 0;
-    width: 40px;
-    height: 40px;
-    background-color: red;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    z-index: 100;
+    border-radius: 10px;
+    padding: 30px 15px;
+    display: block;
+    font-family: $roboto;
+    font-weight: 400;
+    text-align: center;
+    clip-path: circle(4% at 91.5% 7%);
+    transition: all 0.4s;
+
+    &:hover {
+      clip-path: circle(75%);
+      background-color: $middle;
+    }
+
+    .description {
+      text-align: center;
+      align-items: center;
+
+      p {
+        color: white;
+        vertical-align: middle;
+        font-family: $monser;
+        font-size: 18px;
+      }
+    }
   }
+
+  .selected {
+    display: block;
+  }
+
+  .box-title {
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    text-align: center;
+    font-family: $roboto;
+    letter-spacing: 1px;
+    color: white;
+    background: linear-gradient($middle, $green);
+    padding: 10px;
+    height: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    border: none;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -31.5%;
+      background-image: url('../../images/wave.png');
+      background-size: contain;
+      background-repeat: no-repeat;
+      width: 100%;
+      height: 100px;
+    }
+
+    &-plus {
+      color: white;
+      font-size: 30px;
+      position: absolute;
+      z-index: 1000;
+      top: 3%;
+      right: 3%;
+      cursor: pointer;
+    }
+
+    h4 {
+      color: white;
+      font-weight: 700;
+    }
+  }
+
+  .box-info {
+    padding: 10px 0 20px;
+    text-align: center;
+    background-image: url('../../images/figures_bg.jpg');
+    background-size: cover;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+
+    div {
+      margin: 10px 0;
+      font-weight: 700;
+      font-size: 18px;
+      color: rgb(94, 94, 94);
+    }
+
+    .card-icon {
+      color: orange;
+      font-size: 24px;
+      margin-right: 10px;
+    }
+
+    a {
+      position: relative;
+      display: inline-block;
+      border: 5px solid $middle;
+      border-radius: 10px;
+      padding: 2px 8px;
+      background-color: $middle;
+      color: white;
+      font-family: $roboto;
+      font-weight: 700;
+      font-size: 16px;
+      letter-spacing: 1px;
+      text-transform: lowercase;
+      transition: box-shadow 0.4s ease-in;
+
+      @include glass-effect;
+
+      .fa-chevron-right {
+        display: inline-block;
+        height: 100%;
+        color: white;
+        vertical-align: middle;
+      }
+    }
+  }
+
+  &:hover {
+    box-shadow: 10px 10px 17px -3px rgba(0, 0, 0, 0.75);
+  }
+}
+
+.contic {
+  display: flex;
+  flex-direction: row;
+}
+
+.plus-selected {
+  transform: rotate(45deg);
+  color: red;
 }

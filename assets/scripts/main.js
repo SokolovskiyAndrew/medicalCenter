@@ -1,6 +1,9 @@
 // import external dependencies
 import "jquery"
 import "./modules/**/*"
+// import $ from 'jquery';
+// import 'slick-carousel';
+// $(".slider-wrapper").slick();
 
 //Header_menu
 $(window).on('scroll', function () {
@@ -66,3 +69,39 @@ $(document).ready(function () {
     $('#usi-poslugi').addClass('active');
     $('a[href="#usi-poslugi"]').addClass('active');
 })
+
+$(document).ready(function () {
+    $('a[href="#usi-poslugi"]').prepend('<i class="fas fa-briefcase-medical service-icon"></i>');
+    $('a[href="#diagnostika-sluhu"]').prepend('<i class="fas fa-assistive-listening-systems service-icon"></i>');
+    $('a[href="#likarski-manipul"]').prepend('<i class="fas fa-stethoscope service-icon"></i>');
+    $('a[href="#konsultac-speczialistiv"]').prepend('<i class="fas fa-user-md service-icon"></i>');
+    $('a[href="#pidbir-sluhovih-aparativ"]').prepend('<i class="fas fa-deaf service-icon"></i>');
+    $('.footer-block-sidebar .footersidebar .menu-item').prepend('<i class="fas fa-caret-right footer-caret"></i>');
+})
+
+// $(document).ready(function () {
+//     $('.box-title-plus').click(function () {
+//         $('.box-title-plus').css('transform', 'rotate(45deg)')
+//         $('.service-box-overlay').fadeIn(1000);
+//     }), function () {
+//         $('.service-box-overlay').hide(1000);
+//     }
+//     $('.service-box-overlay').hide();
+// })
+// $('.box-title-plus').one('click', function () {
+//     $(this).toggle(
+//         function () {
+//             $(this).addClass('plus-selected');
+//         }
+//         // }, function () {
+//         //     $(this).removeClass("plus-selected");
+//         // }
+//     )
+//     // $(".service-box-overlay").toggle(
+//     //     function () {
+//     //         $(this).addClass("selected");
+//     //     }, function () {
+//     //         $(this).removeClass("selected");
+//     //     }
+//     // )
+// })

@@ -1,0 +1,13 @@
+.service {
+  &-block {
+    @include two_borders (-4%);
+
+    img {
+      border-radius: 15px;
+      object-fit: cover;
+      object-position: 15%;
+      width: 750px;
+      height: 400px;
+    }
+  }
+}

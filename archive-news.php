@@ -1,7 +1,12 @@
 <?php get_header() ?>
 
-<div>
-  <?php get_template_part( 'template_parts/hero-common'); ?>
+<div class="container-fluid servic-header" style="background-image: url(<?php echo get_template_directory_uri(); ?>../assets/images/streto.jpg)">
+<div class="service-overlay"></div>    
+<div class="container">
+        <div class="row">
+            <h3 class="title"><?php wp_title(); ?></h3>
+        </div>
+    </div>
 </div>
 
 <div class="container">

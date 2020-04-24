@@ -23,7 +23,8 @@ if (!function_exists('Wt_scripts')) :
     function Wt_scripts(){
         $uri = get_template_directory_uri();
         // Enqueue the main Stylesheet.
-        wp_enqueue_style('wt_google_font', '<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">');
+        // wp_enqueue_style('wt_google_font', '<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">');
+        wp_enqueue_style('wt_google_font', '<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,900|Roboto:400,700,900&display=swap" rel="stylesheet">');
         wp_enqueue_style('wt_bootstrap_css', '<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">');
         // wp_enqueue_style('font-awesome_css', '<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">');
         // wp_enqueue_style('main-stylesheet', $uri.'/dist/webfonts', false, null, 'all');
